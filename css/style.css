@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:  #d5af50;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 25s infinite linear;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    70%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.game-conf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background:  #d5af50;
+    height: 20vw;
+}
+
+.game-conf h2{
+    font-size: 60px;
+}
+
+.game-conf p{
+    font-size: 30px;
+    margin-bottom: 1em;
+}
+
+.game-conf button{
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.game-conf button:hover{
+    background: #ffbb22;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 15px;
+}
