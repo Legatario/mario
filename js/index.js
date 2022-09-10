@@ -23,8 +23,8 @@ function game(){
             pipe.style.animation='none'
             pipe.style.left = `${pipePostion}px`
             
-            mario.style.animation='none'
             mario.src = 'https://raw.githubusercontent.com/Legatario/mario/master/Imagem/game-over.png'
+            mario.style.animation='none'
             mario.style.width = '75px'
             mario.style.marginLeft = '50px'
             mario.style.bottom = `${marioPostion}px`
